@@ -7,6 +7,8 @@ module Fog
 
 
       request_path 'fog/hadoop/requests/storage'
+
+      request      :get_info
       request      :get_metrics
 
       class Real
@@ -25,6 +27,6 @@ module Fog
           @storage_api_url = options[:hadoop_storage_api_url] || 'https://localhost:50070/'
         end
       end
-    end #SakuraCloud
+    end
   end #Compute
 end

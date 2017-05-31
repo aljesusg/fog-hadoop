@@ -7,6 +7,7 @@ module Fog
 
 
       request_path 'fog/hadoop/requests/compute'
+
       request      :get_info
       request      :get_scheduler
       request      :get_app_stats
@@ -31,6 +32,6 @@ module Fog
           @compute_api_url = options[:hadoop_compute_api_url] || 'https://localhost:8088/'
         end
       end
-    end #SakuraCloud
+    end
   end #Compute
 end

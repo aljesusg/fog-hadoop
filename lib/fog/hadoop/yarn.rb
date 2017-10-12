@@ -6,7 +6,7 @@ module Fog
       recognizes   :yarn_api_url
 
 
-      request_path 'fog/hadoop/requests/yarn'
+      request_path 'fog/hadoop/yarn/requests'
       request      :get_info
       request      :get_scheduler
       request      :get_app_stats

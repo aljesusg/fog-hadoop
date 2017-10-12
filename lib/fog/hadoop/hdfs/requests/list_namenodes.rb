@@ -2,7 +2,7 @@ module Fog
   module Hadoop
     class HDFS
       class Real
-        def get_nn_status
+        def list_namenodes
           request(
               :expects => 200,
               :method => 'GET',
@@ -11,7 +11,7 @@ module Fog
         end
       end
       class Mock
-        def get_nn_status
+        def list_namenodes
           response = Excon::Response.new
           response.status = 200
           response.body =[

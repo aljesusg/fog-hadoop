@@ -5,9 +5,17 @@ module Fog
 
       recognizes   :hdfs_api_url
 
+      #Models
+      model       :namenode
+      collection :namenodes
 
-      request_path 'fog/hadoop/requests/hdfs'
+      #requests
+      request_path 'fog/hadoop/hdfs/requests'
+
+      #CRUD
       request      :get_metrics
+      request      :list_namenodes
+
 
       class Real
         include Fog::Hadoop::Utils::Request
